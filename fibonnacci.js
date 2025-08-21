@@ -1,4 +1,17 @@
-function fib(times) {}
+function fib(times) {
+  // base case
+  if (times === 0) {
+    return;
+  }
+
+  let array = [];
+
+  if (times > 0) {
+    times = times - 1;
+
+    return;
+  }
+}
 
 // TESTS
 console.log(fib(6)); // [0, 1, 1, 2, 3, 5]
