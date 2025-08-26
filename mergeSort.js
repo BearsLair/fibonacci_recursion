@@ -1,13 +1,15 @@
 function mergeSort(array) {
   // base case
   if (array.length == 1) {
-    return array[0];
+    return array;
+  } else {
+    const sortedLeftArray = mergeSort(
+      array.slice(0, Math.floor(array.length / 2))
+    );
+    const sortedRightArray = mergeSort(
+      array.slice(Math.floor(array.length / 2), array.length)
+    );
   }
-
-  let leftArray = array.slice(0, array.length / 2);
-  let rightArray = array.slice(array.length / 2, array.length);
-
-  return array;
 }
 
 // Tests
